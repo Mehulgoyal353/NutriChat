@@ -3,6 +3,10 @@ NutriChat is a RAG workflow that lets users query a 1200-page nutrition textbook
 
 PDF source: https://pressbooks.oer.hawaii.edu/humannutrition2/
 
+Workflow of the local pipeline:
+
+![alt text](https://github.com/Mehulgoyal353/NutriChat/blob/main/RAG_workflow.png)
+
 ## What is RAG?
 RAG stands for Retrieval Augmented Generation.
 
