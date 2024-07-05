@@ -30,14 +30,19 @@ These points were outlined in the original RAG paper along with its advantages o
   + **Token** - A sub-word piece of text. For example, "hello, world!" could be split into ["hello", ",", "world", "!"]. A token can be a whole word,
 part of a word or group of punctuation characters. 1 token ~= 4 characters in English, 100 tokens ~= 75 words.
 Text gets broken into tokens before being passed to an LLM.
+
   + **Embedding** - A learned numerical representation of a piece of data. For example, a sentence of text could be represented by a vector with
 768 values. Similar pieces of text (in meaning) will ideally have similar values.
+    
   + **Embedding model** - A model designed to accept input data and output a numerical representation. For example, a text embedding model may take in 384
 tokens of text and turn it into a vector of size 768. An embedding model can and often is different to an LLM model.
+
   + **Similarity search/vector search** - Similarity search/vector search aims to find two vectors which are close together in high-demensional space. For example, two pieces of similar text passed through an embedding model should have a high similarity score, whereas two pieces of text about different topics will have a lower similarity score. Common similarity score measures are dot product and cosine similarity.
+    
   + **Large Language Model** - A model which has been trained to numerically represent the patterns in text. A generative LLM will continue a sequence when given a sequence.
 For example, given a sequence of the text "hello, world!", a genertive LLM may produce "we're going to build a RAG pipeline today!".
 This generation will be highly dependant on the training data and prompt.
+
   + **LLM Context Window** - The number of tokens a LLM can accept as input. For example, as of March 2024, GPT-4 has a default context window of 32k tokens (about 96 pages of text) but can go up to 128k if needed. A recent open-source LLM from Google, Gemma (March 2024) has a context
 window of 8,192 tokens (about 24 pages of text). A higher context window means an LLM can accept more relevant information
 to assist with a query. For example, in a RAG pipeline, if a model has a larger context window, it can accept more reference items
